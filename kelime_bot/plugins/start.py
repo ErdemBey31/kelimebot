@@ -11,27 +11,23 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 keyboard = InlineKeyboardMarkup([
     [
-        InlineKeyboardButton("➕ Grubuna Ekle", url=f"http://t.me/Kelimeyi_turet_bot?startgroup=new")
+        InlineKeyboardButton("➕ Grubuna Ekle", url=f"http://t.me/Kelimeoyunurobot?startgroup=new")
     ],
     [
-        InlineKeyboardButton("🇹🇷 Sahibim", url="t.me/Sohbetf"),
-        InlineKeyboardButton("💬 Chat", url="t.me/Sohbetf"),
+        InlineKeyboardButton("🇹🇷 Sahibim", url="t.me/erd3m_bey"),
+        InlineKeyboardButton("💬 Chat", url="t.me/kelimeoyunuchat"),
     ]
 ])
 
 
 START = """
-**🔮 Merhaba, @Sohbetf Kelime Bota hoş geldin bu bot ile Kelime türet oyunu veya kelime anlatmaca oynayabilirsin..**
+**🔮 Merhaba, Kelime Bota hoş geldin bu bot ile Kelime türetme oyunu oynayabilirsin..**
 
 ➤ Bilgi için 👉 /help Tıklayın. Komutlar kolay ve basittir. 
 """
 
 HELP = """
 **✌️ Komutlar Menüsüne Hoşgeldiniz.**
-/bulmaca - Kelime Anlatma Oyunu Başlatır.
-/ogretmen - Kelime Anlatma Oyununda Ogretmen Olma.. 
-/puan - Oyuncular arasındaki rekabet bilgisi..
-
 
 /game - Kelime Türet oyunu başlatır.. 
 /pass - kelimeyi Pass geçer.
@@ -62,7 +58,7 @@ async def kelimeoyun(c:Client, m:Message):
     if aktif:
         await m.reply("**❗ Oyun Zaten Grubunuzda Devam Ediyor ✍🏻 \n Oyunu durdurmak için yazıp /cancel durdurabilirsiniz")
     else:
-        await m.reply(f"**{m.from_user.mention}** Tarafından! \nKelime Bulma Oyunu Başladı .\n\nİyi Şanslar !", reply_markup=kanal)
+        await m.reply(f"**{m.from_user.mention}** Tarafından! \nKelime Bulma Oyunu Başladı .\n\nİyi Şanslar !")
         
         oyun[m.chat.id] = {"kelime":kelime_sec()}
         oyun[m.chat.id]["aktif"] = True
