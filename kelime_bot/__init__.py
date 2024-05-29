@@ -17,9 +17,9 @@ LOGGER = logging.getLogger(__name__)
 # Hesap
 API_ID = 22414322
 API_HASH = "d4ae0d06f838826fbcf1fa2dbe6b8f91"
-TOKEN = "6585844649:AAGx2ubqydC1DFXyVkYZ4xRJGSAkuLs71yU"
-USERNAME = "kelimeoyunurobot"
-OWNER_ID = "6691596766"
+TOKEN = "7038470567:AAGbz3Sh4bvrybGL0SxlMTt9oGOpzQX2o5c"
+USERNAME = "Voleria_kelimebot"
+OWNER_ID = "6800066189"
 
 if OWNER_ID and len(OWNER_ID) and OWNER_ID.isdigit():
     OWNER_ID = int(OWNER_ID)  # type: ignore
