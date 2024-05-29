@@ -11,19 +11,19 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 keyboard = InlineKeyboardMarkup([
     [
-        InlineKeyboardButton("➕ Grubuna Ekle", url=f"http://t.me/Kelimeoyunurobot?startgroup=new")
+        InlineKeyboardButton("➕ Grubuna Ekle", url=f"http://t.me/Voleria_kelimebot?startgroup=new")
     ],
     [
-        InlineKeyboardButton("🇹🇷 Sahibim", url="t.me/erd3m_bey"),
-        InlineKeyboardButton("💬 Chat", url="t.me/kelimeoyunuchat"),
+        InlineKeyboardButton("🇹🇷 Sahibim", url="t.me/bowed36"),
+        InlineKeyboardButton("💬 Chat", url="t.me/VoleriaChat"),
     ]
 ])
 
 
 START = """
-**🔮 Merhaba, Kelime Bota hoş geldin bu bot ile Kelime türetme oyunu oynayabilirsin..**
+**🔮 Merhaba, Voleria Kelime Botuna hoş geldin bu bot ile Kelime türetme oyunu oynayabilirsin..**
 
-➤ Bilgi için 👉 /help Tıklayın. Komutlar kolay ve basittir. 
+➤ Bilgi için 👉 /help'i Tıkla. Komutlar kolay ve basittir. 
 """
 
 HELP = """
@@ -56,7 +56,7 @@ async def kelimeoyun(c:Client, m:Message):
         aktif = False
 
     if aktif:
-        await m.reply("**❗ Oyun Zaten Grubunuzda Devam Ediyor ✍🏻 \n Oyunu durdurmak için yazıp /cancel durdurabilirsiniz")
+        await m.reply("**❗ Oyun Zaten Grubunuzda Devam Ediyor ✍🏻 \n Oyunu durdurmak için yazıp /cancel durdurabilirsin.")
     else:
         await m.reply(f"**{m.from_user.mention}** Tarafından! \nKelime Bulma Oyunu Başladı .\n\nİyi Şanslar !")
         
@@ -74,11 +74,11 @@ async def kelimeoyun(c:Client, m:Message):
             kelime_list+= harf + " "
         
         text = f"""
-🎯 Raund : {oyun[m.chat.id]['round']}/60 
-📝 Söz :   <code>{kelime_list}</code>
+🎯 Raunt: {oyun[m.chat.id]['round']}/60 
+📝 Söz:   <code>{kelime_list}</code>
 💰 Kazandığınız Puan: 1
 🔎 İpucu: 1. {oyun[m.chat.id]["kelime"][0]}
-✍🏻 Uzunluk : {int(len(kelime_list)/2)} 
+✍🏻 Uzunluk: {int(len(kelime_list)/2)} 
 
 ✏️ Karışık harflerden doğru kelimeyi bulun
         """
