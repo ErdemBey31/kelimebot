@@ -34,10 +34,10 @@ async def passs(c:Client, m:Message):
                 kelime_list+= harf + " "
             
             text = f"""
-🎯 Raund : {oyun[m.chat.id]['round']}/60 
-📝 Kelime :   <code>{kelime_list}</code>
-💰 Kazandığınız Puan : 1
-🔎 İ𝗉𝗎𝖼𝗎 : 1. {oyun[m.chat.id]["kelime"][0]}
+🎯 Raund: {oyun[m.chat.id]['round']}/60 
+📝 Kelime:   <code>{kelime_list}</code>
+💰 Kazandığınız Puan: 1
+🔎 İ𝗉𝗎𝖼𝗎: 1. {oyun[m.chat.id]["kelime"][0]}
 ✍🏻 𝖴𝗓𝗎𝗇𝗅uk: {int(len(kelime_list)/2)} 
 
 ✏️ Karışık harflerden doğru kelimeyi bulun
