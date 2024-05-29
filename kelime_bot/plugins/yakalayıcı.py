@@ -47,7 +47,7 @@ async def buldu(c:Client, m:Message):
                     for i in siralama:
                         siralama_text += i + "\n"
                     
-                    return await c.send_message(m.chat.id,f"✅ Oyun Bitti✓ \n\n📝 Puan :\n\n{siralama_text}\n\n Yeni Oyuna Başlamak İçin /game Yaza Bilirsiniz !")
+                    return await c.send_message(m.chat.id,f"✅ Oyun Bitti✓ \n\n📝 Puan :\n\n{siralama_text}\n\n Yeni Oyuna Başlamak İçin /game Yazabilirsiniz!")
                 
                 
                 
@@ -58,11 +58,11 @@ async def buldu(c:Client, m:Message):
                     kelime_list+= harf + " "
             
                 text = f"""
-🎯 Raund : {oyun[m.chat.id]['round']}/60 
-📝 Söz :   <code>{kelime_list}</code>
+🎯 Raunt: {oyun[m.chat.id]['round']}/60 
+📝 Söz:   <code>{kelime_list}</code>
 💰 Kazandığınız Puan: 1
 🔎 İpucu: 1. {oyun[m.chat.id]["kelime"][0]}
-✍🏻 Uzunluk : {int(len(kelime_list)/2)} 
+✍🏻 Uzunluk: {int(len(kelime_list)/2)} 
 
 ✏️ Karışık harflerden doğru kelimeyi bulun
                         """
